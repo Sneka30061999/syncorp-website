@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Layered cloud stack icon">
+<defs>
+<linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#b9c1d1"/><stop offset="1" stop-color="#5d6780"/></linearGradient>
+<linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8e98ad"/><stop offset="1" stop-color="#2a3145"/></linearGradient>
+<radialGradient id="h" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#9db4ff" stop-opacity=".35"/><stop offset="1" stop-color="#9db4ff" stop-opacity="0"/></radialGradient>
+<filter id="b" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+<ellipse cx="200" cy="215" rx="170" ry="140" fill="url(#h)"/>
+<ellipse cx="200" cy="350" rx="110" ry="14" fill="#9db4ff" opacity=".25" filter="url(#b)"/>
+<path d="M200 190 L320 250 L200 310 L80 250 Z" fill="url(#d)" stroke="#dfe4ee" stroke-opacity=".8" stroke-width="2"/><path d="M80 250 L200 310 L320 250 L320 268 L200 328 L80 268 Z" fill="url(#d)" stroke="#dfe4ee" stroke-opacity=".5" stroke-width="2"/><path d="M200 138 L320 198 L200 258 L80 198 Z" fill="url(#d)" stroke="#dfe4ee" stroke-opacity=".8" stroke-width="2"/><path d="M80 198 L200 258 L320 198 L320 216 L200 276 L80 216 Z" fill="url(#d)" stroke="#dfe4ee" stroke-opacity=".5" stroke-width="2"/><path d="M200 86 L320 146 L200 206 L80 146 Z" fill="url(#m)" stroke="#dfe4ee" stroke-opacity=".8" stroke-width="2"/><path d="M80 146 L200 206 L320 146 L320 164 L200 224 L80 164 Z" fill="url(#d)" stroke="#dfe4ee" stroke-opacity=".5" stroke-width="2"/>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Rising bar chart icon">
+<defs>
+<linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#b9c1d1"/><stop offset="1" stop-color="#5d6780"/></linearGradient>
+<linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8e98ad"/><stop offset="1" stop-color="#2a3145"/></linearGradient>
+<radialGradient id="h" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#9db4ff" stop-opacity=".35"/><stop offset="1" stop-color="#9db4ff" stop-opacity="0"/></radialGradient>
+<filter id="b" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+<ellipse cx="200" cy="215" rx="170" ry="140" fill="url(#h)"/>
+<ellipse cx="200" cy="350" rx="110" ry="14" fill="#9db4ff" opacity=".25" filter="url(#b)"/>
+<rect x="90" y="250" width="44" height="70" rx="6" fill="url(#m)" stroke="#fff" stroke-opacity=".7" stroke-width="2"/><rect x="120" y="256" width="14" height="64" rx="3" fill="#2a3145" opacity=".45"/><rect x="150" y="195" width="44" height="125" rx="6" fill="url(#m)" stroke="#fff" stroke-opacity=".7" stroke-width="2"/><rect x="180" y="201" width="14" height="119" rx="3" fill="#2a3145" opacity=".45"/><rect x="210" y="140" width="44" height="180" rx="6" fill="url(#m)" stroke="#fff" stroke-opacity=".7" stroke-width="2"/><rect x="240" y="146" width="14" height="174" rx="3" fill="#2a3145" opacity=".45"/><rect x="270" y="85" width="44" height="235" rx="6" fill="url(#m)" stroke="#fff" stroke-opacity=".7" stroke-width="2"/><rect x="300" y="91" width="14" height="229" rx="3" fill="#2a3145" opacity=".45"/><polyline points="95,215 170,160 235,185 315,85" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

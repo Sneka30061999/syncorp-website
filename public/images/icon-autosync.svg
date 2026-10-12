@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Gear icon">
+<defs>
+<linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#b9c1d1"/><stop offset="1" stop-color="#5d6780"/></linearGradient>
+<linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8e98ad"/><stop offset="1" stop-color="#2a3145"/></linearGradient>
+<radialGradient id="h" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#9db4ff" stop-opacity=".35"/><stop offset="1" stop-color="#9db4ff" stop-opacity="0"/></radialGradient>
+<filter id="b" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+<ellipse cx="200" cy="215" rx="170" ry="140" fill="url(#h)"/>
+<ellipse cx="200" cy="350" rx="110" ry="14" fill="#9db4ff" opacity=".25" filter="url(#b)"/>
+<rect x="178" y="48" width="44" height="64" rx="8" fill="url(#m)" stroke="#fff" stroke-opacity=".7" stroke-width="2" transform="rotate(0 200 200)"/><rect x="178" y="48" width="44" height="64" rx="8" fill="url(#m)" stroke="#fff" stroke-opacity=".7" stroke-width="2" transform="rotate(45 200 200)"/><rect x="178" y="48" width="44" height="64" rx="8" fill="url(#m)" stroke="#fff" stroke-opacity=".7" stroke-width="2" transform="rotate(90 200 200)"/><rect x="178" y="48" width="44" height="64" rx="8" fill="url(#m)" stroke="#fff" stroke-opacity=".7" stroke-width="2" transform="rotate(135 200 200)"/><rect x="178" y="48" width="44" height="64" rx="8" fill="url(#m)" stroke="#fff" stroke-opacity=".7" stroke-width="2" transform="rotate(180 200 200)"/><rect x="178" y="48" width="44" height="64" rx="8" fill="url(#m)" stroke="#fff" stroke-opacity=".7" stroke-width="2" transform="rotate(225 200 200)"/><rect x="178" y="48" width="44" height="64" rx="8" fill="url(#m)" stroke="#fff" stroke-opacity=".7" stroke-width="2" transform="rotate(270 200 200)"/><rect x="178" y="48" width="44" height="64" rx="8" fill="url(#m)" stroke="#fff" stroke-opacity=".7" stroke-width="2" transform="rotate(315 200 200)"/><circle cx="200" cy="200" r="104" fill="url(#m)" stroke="#fff" stroke-width="3"/><circle cx="200" cy="200" r="52" fill="#070a12" stroke="#dfe4ee" stroke-width="4"/><circle cx="200" cy="200" r="22" fill="url(#d)"/>
+</svg>

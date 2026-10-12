@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="Shield with check mark icon">
+<defs>
+<linearGradient id="m" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".55" stop-color="#b9c1d1"/><stop offset="1" stop-color="#5d6780"/></linearGradient>
+<linearGradient id="d" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8e98ad"/><stop offset="1" stop-color="#2a3145"/></linearGradient>
+<radialGradient id="h" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#9db4ff" stop-opacity=".35"/><stop offset="1" stop-color="#9db4ff" stop-opacity="0"/></radialGradient>
+<filter id="b" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="10"/></filter>
+</defs>
+<ellipse cx="200" cy="215" rx="170" ry="140" fill="url(#h)"/>
+<ellipse cx="200" cy="350" rx="110" ry="14" fill="#9db4ff" opacity=".25" filter="url(#b)"/>
+<path d="M200 55 L315 100 V195 C315 270 265 322 200 348 C135 322 85 270 85 195 V100 Z" fill="url(#m)" stroke="#fff" stroke-width="3"/>
+   <path d="M200 80 L292 116 V195 C292 255 252 298 200 320 Z" fill="#fff" opacity=".28"/>
+   <path d="M200 100 L275 130 V195 C275 245 243 282 200 302 C157 282 125 245 125 195 V130 Z" fill="url(#d)"/>
+   <path d="M158 200 L192 234 L248 160" fill="none" stroke="#fff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

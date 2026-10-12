@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-label="Dark mountain landscape">
+<defs>
+<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0c1224"/><stop offset="1" stop-color="#05070d"/></linearGradient>
+<linearGradient id="p1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b4560"/><stop offset="1" stop-color="#0a0e1a"/></linearGradient>
+<linearGradient id="p2" x1="1" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f2740"/><stop offset="1" stop-color="#05070d"/></linearGradient>
+<radialGradient id="mg" cx="50%" cy="0%" r="70%"><stop offset="0" stop-color="#9db4ff" stop-opacity=".25"/><stop offset="1" stop-color="#9db4ff" stop-opacity="0"/></radialGradient>
+</defs>
+<rect width="800" height="560" fill="url(#sky)"/><rect width="800" height="560" fill="url(#mg)"/>
+<polygon points="-20,560 180,230 300,380 430,150 640,420 700,330 820,560" fill="url(#p2)"/>
+<polygon points="430,150 520,300 470,290 430,380 380,270 340,300" fill="#c9cfd9" fill-opacity=".1"/>
+<polygon points="-40,560 120,330 240,450 360,260 560,560" fill="url(#p1)" stroke="#c9cfd9" stroke-opacity=".35"/>
+<polyline points="360,260 330,330 360,360 300,430" fill="none" stroke="#fff" stroke-opacity=".45" stroke-width="1.5"/>
+<polygon points="300,560 520,330 640,450 820,300 820,560" fill="#070a12" stroke="#c9cfd9" stroke-opacity=".3"/>
+<rect y="500" width="800" height="60" fill="#05070d"/>
+</svg>
