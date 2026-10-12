@@ -44,7 +44,7 @@ export default function App() {
     };
 
     const handleClick = (e) => {
-      // Buttons
+      // All buttons (includes header-cta) — zoom on click, navigation not blocked
       const btn = e.target.closest(".btn");
       if (btn) { triggerZoom(btn, "btn-zoom"); return; }
 

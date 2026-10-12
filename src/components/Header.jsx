@@ -66,7 +66,7 @@ export default function Header() {
             </svg>
           )}
         </button>
-        <a href="https://wa.me/910000000000" target="_blank" rel="noopener noreferrer" className="btn btn-outline header-cta">Get in Touch</a>
+        <Link to="/contact" className="btn btn-outline header-cta">Get in Touch</Link>
         <button
           className="menu-btn"
           aria-expanded={open}

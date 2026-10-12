@@ -1,9 +1,30 @@
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { company } from "../data/company.js";
+import bgVideo from "../assets/background-video.mp4";
 
 export default function Hero() {
+  const theme = useSelector((state) => state.theme.mode);
+
   return (
     <section className="hero" aria-labelledby="hero-title">
+      {/* Background video — dark mode only */}
+      {theme === "dark" && (
+        <>
+          <video
+            className="hero-bg-video"
+            src={bgVideo}
+            autoPlay
+            loop
+            muted
+            playsInline
+            aria-hidden="true"
+          />
+          {/* Smokey overlay for extra depth on left side */}
+          <div className="hero-smoke" aria-hidden="true" />
+        </>
+      )}
+
       <div className="container hero-grid">
         <div className="hero-copy">
           <p className="eyebrow">{company.eyebrow}</p>
