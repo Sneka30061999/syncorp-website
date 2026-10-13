@@ -60,7 +60,7 @@ export default function Hero() {
           {/* Laptop image — floats up and down */}
           <div className="laptop-float">
             <img
-              src="/images/hero-laptop.svg"
+              src="/syncorp-website/images/hero-laptop.svg"
               alt="Laptop showing a Syncorp analytics dashboard"
               width="900"
               height="560"

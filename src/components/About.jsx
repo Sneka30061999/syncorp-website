@@ -7,7 +7,7 @@ export default function About() {
       <div className="about-bg" aria-hidden="true" />
       <div className="container about-grid">
         <div className="about-img">
-          <img src="/images/mountains.svg" alt="Dark mountain landscape representing a strong foundation" loading="lazy" width="800" height="560" />
+          <img src="/syncorp-website/images/mountains.svg" alt="Dark mountain landscape representing a strong foundation" loading="lazy" width="800" height="560" />
         </div>
         <div className="about-copy">
           <p className="eyebrow">Why Choose Syncorp</p>

@@ -21,8 +21,8 @@ export const products = [
     intro:
       "TaskFlow helps teams stay organized, collaborate efficiently and get more done. Manage your projects, assign tasks and track progress, all in one place.",
     short: "A powerful solution to streamline your business operations and improve team collaboration.",
-    icon: "/images/icon-taskflow.svg",
-    image: "/images/taskflow-screen.svg",
+    icon: "/syncorp-website/images/icon-taskflow.svg",
+    image: "/syncorp-website/images/taskflow-screen.svg",
     overviewTitle: "Simplify Project Management with TaskFlow",
     purpose:
       "TaskFlow is a modern project management tool designed to help teams plan, track and complete tasks with ease. Whether you are a small team or a growing business, TaskFlow gives you the clarity and control you need to stay on top.",
@@ -57,8 +57,8 @@ export const products = [
     intro:
       "DataLens turns your spreadsheets and app data into clear dashboards, so your team can make confident decisions without a data expert.",
     short: "Gain valuable insights with real-time analytics and intelligent reporting.",
-    icon: "/images/icon-datalens.svg",
-    image: "/images/datalens-screen.svg",
+    icon: "/syncorp-website/images/icon-datalens.svg",
+    image: "/syncorp-website/images/datalens-screen.svg",
     overviewTitle: "Understand Your Business with DataLens",
     purpose:
       "DataLens is an easy-to-use analytics tool that brings your numbers together in one place. Connect your data, pick a chart and share a live dashboard with your team in minutes.",
@@ -93,8 +93,8 @@ export const products = [
     intro:
       "SecureVault keeps your company files and records safe, and shows you who accessed what and when.",
     short: "Secure your data and business with advanced security and compliance features.",
-    icon: "/images/icon-securevault.svg",
-    image: "/images/securevault-screen.svg",
+    icon: "/syncorp-website/images/icon-securevault.svg",
+    image: "/syncorp-website/images/securevault-screen.svg",
     overviewTitle: "Protect Your Business with SecureVault",
     purpose:
       "SecureVault is a secure place for important business files. You decide who can see and change each file, and every action is recorded so you stay in control and ready for audits.",
@@ -129,8 +129,8 @@ export const products = [
     intro:
       "AutoSync connects the tools you already use and handles repeat tasks for you, so your team can focus on real work.",
     short: "Automate your workflows and save time with smart automation tools.",
-    icon: "/images/icon-autosync.svg",
-    image: "/images/autosync-screen.svg",
+    icon: "/syncorp-website/images/icon-autosync.svg",
+    image: "/syncorp-website/images/autosync-screen.svg",
     overviewTitle: "Automate Your Daily Work with AutoSync",
     purpose:
       "AutoSync is a no-code automation tool. Set simple rules, connect your apps and let routine work run on its own, with a clear record of everything that ran.",
