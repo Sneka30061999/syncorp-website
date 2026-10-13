@@ -1,9 +1,11 @@
 import { useEffect, useRef } from "react";
 import ContactForm from "./ContactForm.jsx";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 
 // Accessible modal: closes on Esc / backdrop / close button, locks page scroll, restores focus.
 export default function ContactModal({ product, onClose }) {
   const dialogRef = useRef(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const previous = document.activeElement;
@@ -34,9 +36,9 @@ export default function ContactModal({ product, onClose }) {
   return (
     <div className="modal-backdrop" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
       <div className="modal glass" role="dialog" aria-modal="true" aria-labelledby="modal-title" ref={dialogRef}>
-        <button className="modal-close" onClick={onClose} aria-label="Close contact form">×</button>
-        <h2 id="modal-title">Get in touch about {product.name}</h2>
-        <p className="body-text">Tell us a little about you and we will get back to you.</p>
+        <button className="modal-close" onClick={onClose} aria-label={t("modal_close")}>×</button>
+        <h2 id="modal-title">{t("modal_title")} {product.name}</h2>
+        <p className="body-text">{t("modal_body")}</p>
         <ContactForm product={product} autoFocus onDone={onClose} />
       </div>
     </div>

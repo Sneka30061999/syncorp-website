@@ -2,8 +2,11 @@ import { Link } from "react-router-dom";
 import Logo from "./Logo.jsx";
 import { Icon, SocialIcons } from "./Icons.jsx";
 import { company } from "../data/company.js";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 
 export default function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="site-footer">
       <div className="container footer-grid">
@@ -12,11 +15,11 @@ export default function Footer() {
         </div>
 
         <nav aria-label="Footer" className="f-nav">
-          <Link to="/">Home</Link>
-          <Link to="/#about">About</Link>
-          <Link to="/#products">Products</Link>
-          <Link to="/#solutions">Solutions</Link>
-          <Link to="/contact">Contact</Link>
+          <Link to="/">{t("nav_home")}</Link>
+          <Link to="/#about">{t("nav_about")}</Link>
+          <Link to="/#products">{t("nav_products")}</Link>
+          <Link to="/#solutions">{t("nav_solutions")}</Link>
+          <Link to="/contact">{t("nav_contact")}</Link>
         </nav>
 
         <address className="f-contact">
@@ -27,7 +30,7 @@ export default function Footer() {
         <SocialIcons />
       </div>
       <div className="container copyright">
-        © {new Date().getFullYear()} {company.name}. All rights reserved.
+        © {new Date().getFullYear()} {company.name}. {t("footer_rights")}
       </div>
     </footer>
   );

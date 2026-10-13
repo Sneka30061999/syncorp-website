@@ -1,27 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { products, getProduct } from "../data/products.js";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-export const prefill = (product) =>
-  product ? `I am interested in learning more about ${product.name}.` : "";
-
-function validate(v) {
-  const e = {};
-  if (!v.name.trim()) e.name = "Enter your name.";
-  else if (v.name.trim().length < 2) e.name = "Name must be at least 2 characters.";
-
-  if (!v.email.trim()) e.email = "Enter your email address.";
-  else if (!EMAIL_RE.test(v.email.trim())) e.email = "Enter a valid email, like name@company.com.";
-
-  const digits = v.phone.replace(/[\s()+-]/g, "");
-  if (!v.phone.trim()) e.phone = "Enter your phone number.";
-  else if (!/^\d{7,15}$/.test(digits)) e.phone = "Enter 7 to 15 digits. You may start with +.";
-
-  if (!v.message.trim()) e.message = "Write a short message.";
-  else if (v.message.trim().length < 10) e.message = "Message must be at least 10 characters.";
-  return e;
-}
 
 // Sends the enquiry to VITE_FORM_ENDPOINT if set, otherwise stores it in localStorage (demo mode).
 async function sendEnquiry(payload) {
@@ -42,12 +23,13 @@ async function sendEnquiry(payload) {
 }
 
 export default function ContactForm({ product = null, selectable = false, onDone, autoFocus = false }) {
+  const { t } = useLanguage();
   const [productId, setProductId] = useState(product?.id ?? "");
   const [values, setValues] = useState({
     name: "",
     email: "",
     phone: "",
-    message: prefill(product),
+    message: product ? `${t("form_prefill")} ${product.name}.` : "",
   });
   const [touched, setTouched] = useState({});
   const [status, setStatus] = useState("idle"); // idle | sending | sent | error
@@ -58,11 +40,34 @@ export default function ContactForm({ product = null, selectable = false, onDone
     if (autoFocus) nameRef.current?.focus();
   }, [autoFocus]);
 
-  // Keep message prefill in sync with the product when the visitor hasn't typed their own text
+  // Keep message prefill in sync with selected product (if user hasn't typed)
   useEffect(() => {
     if (messageEdited.current) return;
-    setValues((v) => ({ ...v, message: prefill(getProduct(productId)) }));
-  }, [productId]);
+    const p = getProduct(productId);
+    setValues((v) => ({
+      ...v,
+      message: p ? `${t("form_prefill")} ${p.name}.` : "",
+    }));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [productId, t]);
+
+  // Re-validate when language changes (error messages are translated)
+  const validate = (v) => {
+    const e = {};
+    if (!v.name.trim()) e.name = t("form_err_name");
+    else if (v.name.trim().length < 2) e.name = t("form_err_name_len");
+
+    if (!v.email.trim()) e.email = t("form_err_email");
+    else if (!EMAIL_RE.test(v.email.trim())) e.email = t("form_err_email_fmt");
+
+    const digits = v.phone.replace(/[\s()+-]/g, "");
+    if (!v.phone.trim()) e.phone = t("form_err_phone");
+    else if (!/^\d{7,15}$/.test(digits)) e.phone = t("form_err_phone_fmt");
+
+    if (!v.message.trim()) e.message = t("form_err_msg");
+    else if (v.message.trim().length < 10) e.message = t("form_err_msg_len");
+    return e;
+  };
 
   const errors = validate(values);
   const show = (f) => touched[f] && errors[f];
@@ -102,9 +107,13 @@ export default function ContactForm({ product = null, selectable = false, onDone
     return (
       <div className="success" role="status">
         <div className="tick" aria-hidden="true">✓</div>
-        <h3>Thank you, {values.name.split(" ")[0]}.</h3>
-        <p>We received your message{getProduct(productId) ? ` about ${getProduct(productId).name}` : ""} and will reply to {values.email} soon.</p>
-        {onDone && <button className="btn btn-outline" onClick={onDone}>Close</button>}
+        <h3>{t("form_success_h3")}, {values.name.split(" ")[0]}.</h3>
+        <p>
+          {t("form_success_body")}
+          {getProduct(productId) ? ` ${t("form_success_about")} ${getProduct(productId).name}` : ""}
+          {" "}{t("form_success_reply")} {values.email} {t("form_success_soon")}
+        </p>
+        {onDone && <button className="btn btn-outline" onClick={onDone}>{t("form_close")}</button>}
       </div>
     );
   }
@@ -132,9 +141,9 @@ export default function ContactForm({ product = null, selectable = false, onDone
     <form className="form" onSubmit={onSubmit} noValidate>
       {selectable && (
         <div className="field">
-          <label htmlFor="cf-product">Product</label>
+          <label htmlFor="cf-product">{t("form_product")}</label>
           <select id="cf-product" value={productId} onChange={(e) => setProductId(e.target.value)}>
-            <option value="">General enquiry</option>
+            <option value="">{t("form_general")}</option>
             {products.map((p) => (
               <option key={p.id} value={p.id}>{p.name}</option>
             ))}
@@ -143,13 +152,13 @@ export default function ContactForm({ product = null, selectable = false, onDone
       )}
 
       <div className="row">
-        {field("name", "Name", { type: "text", autoComplete: "name" })}
-        {field("phone", "Phone", { type: "tel", autoComplete: "tel", inputMode: "tel" })}
+        {field("name", t("form_name"), { type: "text", autoComplete: "name" })}
+        {field("phone", t("form_phone"), { type: "tel", autoComplete: "tel", inputMode: "tel" })}
       </div>
-      {field("email", "Email", { type: "email", autoComplete: "email" })}
+      {field("email", t("form_email"), { type: "email", autoComplete: "email" })}
 
       <div className={`field ${show("message") ? "invalid" : ""}`}>
-        <label htmlFor="cf-message">Message <span aria-hidden="true">*</span></label>
+        <label htmlFor="cf-message">{t("form_message")} <span aria-hidden="true">*</span></label>
         <textarea
           id="cf-message"
           name="message"
@@ -165,11 +174,11 @@ export default function ContactForm({ product = null, selectable = false, onDone
       </div>
 
       {status === "error" && (
-        <p className="error banner" role="alert">Something went wrong sending your message. Check your connection and try again.</p>
+        <p className="error banner" role="alert">{t("form_err_network")}</p>
       )}
 
       <button type="submit" className="btn btn-primary" disabled={status === "sending"}>
-        {status === "sending" ? "Sending…" : "Send message"}
+        {status === "sending" ? t("form_sending") : t("form_send")}
       </button>
     </form>
   );

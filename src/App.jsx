@@ -7,6 +7,7 @@ import Home from "./pages/Home.jsx";
 import ProductPage from "./pages/ProductPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import NotFound from "./pages/NotFound.jsx";
+import { useLanguage } from "./i18n/LanguageContext.jsx";
 
 // Scrolls to top on page change, or to the #section when the URL has a hash (e.g. /#products).
 function ScrollManager() {
@@ -26,6 +27,7 @@ function ScrollManager() {
 
 export default function App() {
   const theme = useSelector((state) => state.theme.mode);
+  const { t } = useLanguage();
 
   // Apply "light" or "dark" class to <html> so CSS variables can respond
   useEffect(() => {
@@ -78,7 +80,7 @@ export default function App() {
         target="_blank"
         rel="noopener noreferrer"
         className="whatsapp-float"
-        aria-label="Chat with us on WhatsApp"
+        aria-label={t("wa_label")}
       >
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="32" height="32" aria-hidden="true">
           <path fill="#fff" d="M4.868 43.303l2.694-9.835a18.931 18.931 0 0 1-2.527-9.489C5.038 13.514 13.514 5.038 23.98 5.038c5.076.002 9.845 1.98 13.43 5.566 3.584 3.588 5.558 8.356 5.556 13.428-.004 10.465-8.48 18.942-18.943 18.942h-.007a18.96 18.96 0 0 1-9.055-2.301L4.868 43.303z"/>

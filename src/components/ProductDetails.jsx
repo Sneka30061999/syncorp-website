@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Icon } from "./Icons.jsx";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 
 // Laptop frame used for the product screenshot (hero and "why" section)
 function Laptop({ src, alt, priority = false }) {
@@ -15,11 +16,20 @@ function Laptop({ src, alt, priority = false }) {
 
 export default function ProductDetails({ product, onGetInTouch }) {
   const p = product;
+  const { t } = useLanguage();
+
+  const whyChecks = [
+    t("pd_whycheck1"),
+    t("pd_whycheck2"),
+    t("pd_whycheck3"),
+    t("pd_whycheck4"),
+  ];
+
   return (
     <article className="pd">
       {/* Hero */}
       <section className="pd-hero container" aria-labelledby="pd-title">
-        <Link to="/#products" className="back-link"><Icon name="back" size={16} /> Back to Products</Link>
+        <Link to="/#products" className="back-link"><Icon name="back" size={16} /> {t("pd_back")}</Link>
         <div className="pd-hero-grid">
           <div>
             <div className="pd-title-row">
@@ -33,11 +43,11 @@ export default function ProductDetails({ product, onGetInTouch }) {
             <p className="lead">{p.intro}</p>
             <div className="hero-actions">
               <button type="button" className="btn btn-outline" onClick={onGetInTouch}>
-                Get in Touch <Icon name="arrow" size={16} />
+                {t("pd_get_touch")} <Icon name="arrow" size={16} />
               </button>
               {p.demoUrl && (
                 <a className="btn btn-ghost" href={p.demoUrl} target="_blank" rel="noreferrer">
-                  <Icon name="play" size={14} /> Watch Demo
+                  <Icon name="play" size={14} /> {t("pd_watch")}
                 </a>
               )}
             </div>
@@ -49,7 +59,7 @@ export default function ProductDetails({ product, onGetInTouch }) {
       {/* Overview */}
       <section className="pd-section container pd-overview" aria-labelledby="ov-title">
         <div>
-          <p className="eyebrow">Overview</p>
+          <p className="eyebrow">{t("pd_overview")}</p>
           <h2 id="ov-title">{p.overviewTitle}</h2>
           <p className="body-text">{p.purpose}</p>
           <ul className="pd-highlights">
@@ -71,7 +81,7 @@ export default function ProductDetails({ product, onGetInTouch }) {
       <section className="pd-section container" aria-labelledby="kf-title">
         <div className="kf-head">
           <div>
-            <p className="eyebrow">Key Features</p>
+            <p className="eyebrow">{t("pd_features")}</p>
             <h2 id="kf-title">{p.featuresTitle}</h2>
           </div>
           <p className="body-text">{p.featuresIntro}</p>
@@ -93,30 +103,16 @@ export default function ProductDetails({ product, onGetInTouch }) {
       <section className="pd-section container pd-why" aria-labelledby="why-title">
         <Laptop src={p.image} alt={`${p.name} on a laptop`} />
         <div>
-          <p className="eyebrow">Why Choose {p.name}</p>
+          <p className="eyebrow">{t("pd_why")} {p.name}</p>
           <h2 id="why-title">{p.whyTitle}</h2>
           <p className="body-text">{p.whyText}</p>
           <ul className="checks">
-            {p.whyPoints.map((w) => (
+            {whyChecks.map((w) => (
               <li key={w}><Icon name="check" size={18} /> {w}</li>
             ))}
           </ul>
         </div>
       </section>
-
-      {/* CTA */}
-      {/* <section className="container pd-cta-wrap">
-        <div className="pd-cta glass">
-          <span className="cta-icon"><Icon name="send" size={34} /></span>
-          <div className="cta-text">
-            <h2>Ready to Get Started?</h2>
-            <p>{p.ctaText}</p>
-          </div>
-          <button type="button" className="btn btn-outline" onClick={onGetInTouch}>
-            Get in Touch <Icon name="arrow" size={16} />
-          </button>
-        </div>
-      </section> */}
     </article>
   );
 }

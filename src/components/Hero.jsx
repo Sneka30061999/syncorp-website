@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { company } from "../data/company.js";
+import { useLanguage } from "../i18n/LanguageContext.jsx";
 import bgVideo from "../assets/background-video.mp4";
 
 export default function Hero() {
   const theme = useSelector((state) => state.theme.mode);
+  const { t } = useLanguage();
 
   return (
     <section className="hero" aria-labelledby="hero-title">
@@ -20,35 +21,28 @@ export default function Hero() {
             playsInline
             aria-hidden="true"
           />
-          {/* Smokey overlay for extra depth on left side */}
           <div className="hero-smoke" aria-hidden="true" />
         </>
       )}
 
       <div className="container hero-grid">
         <div className="hero-copy">
-          <p className="eyebrow">{company.eyebrow}</p>
-          <h1 id="hero-title">{company.tagline}</h1>
-          <p className="lead">{company.intro}</p>
+          <p className="eyebrow">{t("hero_eyebrow")}</p>
+          <h1 id="hero-title">{t("hero_tagline")}</h1>
+          <p className="lead">{t("hero_intro")}</p>
           <div className="hero-actions">
-            <Link to="/#products" className="btn btn-outline">Explore Products</Link>
-            <Link to="/contact" className="btn btn-outline">Contact Us</Link>
+            <Link to="/#products" className="btn btn-outline">{t("hero_explore")}</Link>
+            <Link to="/contact" className="btn btn-outline">{t("hero_contactUs")}</Link>
           </div>
         </div>
 
         <div className="hero-art">
-          {/* Floating background scene */}
           <div className="laptop-scene" aria-hidden="true">
-            {/* Ambient blobs */}
             <span className="blob blob-1" />
             <span className="blob blob-2" />
             <span className="blob blob-3" />
-
-            {/* Orbiting ring */}
             <span className="orbit-ring orbit-ring-1" />
             <span className="orbit-ring orbit-ring-2" />
-
-            {/* Floating particles */}
             <span className="particle p1" />
             <span className="particle p2" />
             <span className="particle p3" />
@@ -56,8 +50,6 @@ export default function Hero() {
             <span className="particle p5" />
             <span className="particle p6" />
           </div>
-
-          {/* Laptop image — floats up and down */}
           <div className="laptop-float">
             <img
               src="/syncorp-website/images/hero-laptop.svg"
