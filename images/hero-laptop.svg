@@ -29,15 +29,15 @@
   <ellipse cx="460" cy="310" rx="420" ry="240" fill="url(#ag)"/>
 
   <!-- Laptop lid back -->
-  <rect x="155" y="32" width="610" height="398" rx="20" fill="url(#lg)" stroke="#2e3460" stroke-width="1.5"/>
+  <rect x="155" y="32" width="610" height="398" rx="20" fill="url(#lg)"/>
   <rect x="155" y="32" width="610" height="180" rx="20" fill="white" fill-opacity="0.03"/>
   <!-- Lid logo -->
   <circle cx="460" cy="230" r="22" fill="none" stroke="#6366f1" stroke-opacity="0.5" stroke-width="1.5"/>
   <path d="M452 222 c-1-3-4-5-7-5 c-5 0-8 3-8 7 c0 8 14 4 14 12 c0 3-3 5-7 5 c-3 0-6-1-8-4" fill="none" stroke="#8b9cf8" stroke-width="3.5" stroke-linecap="round"/>
 
   <!-- Screen bezel -->
-  <rect x="163" y="40" width="594" height="382" rx="16" fill="#080b14" stroke="#3a3f6a" stroke-width="1.5"/>
-  <rect x="163" y="40" width="594" height="382" rx="16" fill="none" stroke="#6366f1" stroke-opacity="0.3" stroke-width="2"/>
+  <rect x="163" y="40" width="594" height="382" rx="16" fill="#080b14"/>
+  <rect x="163" y="40" width="594" height="382" rx="16" fill="none" stroke="#6366f1" stroke-opacity="0" stroke-width="0"/>
 
   <!-- Screen surface -->
   <rect x="182" y="58" width="556" height="352" rx="8" fill="url(#sbg)"/>
@@ -132,7 +132,7 @@
   <circle cx="460" cy="51" r="1.5" fill="#2a2f50"/>
 
   <!-- Screen reflection -->
-  <rect x="182" y="58" width="556" height="352" rx="8" fill="none" stroke="white" stroke-opacity="0.04" stroke-width="1"/>
+  <rect x="182" y="58" width="556" height="352" rx="8" fill="none" stroke="white" stroke-opacity="0" stroke-width="0"/>
 
   <!-- Hinge -->
   <rect x="155" y="424" width="610" height="8" rx="4" fill="url(#hg)"/>
@@ -141,7 +141,7 @@
   <path d="M138 432 L782 432 L810 476 Q814 490 796 490 H124 Q106 490 110 476 Z" fill="url(#bg)"/>
   <path d="M148 432 L772 432 L798 470 L122 470 Z" fill="white" fill-opacity="0.05"/>
   <!-- Trackpad -->
-  <rect x="392" y="448" width="136" height="26" rx="8" fill="#b8bdd4" fill-opacity="0.45" stroke="#a0a5bc" stroke-opacity="0.55" stroke-width="1"/>
+  <rect x="392" y="448" width="136" height="26" rx="8" fill="#b8bdd4" fill-opacity="0.45"/>
 
   <!-- Floating card top-right: Users -->
   <rect x="754" y="55" width="130" height="68" rx="14" fill="#141a30" stroke="#6366f1" stroke-opacity="0.6" stroke-width="1"/>
