@@ -13,7 +13,7 @@ export default function Logo({ onClick }) {
   const textSub      = isLight ? "#3d4a6b" : "#a9b1c2";
 
   return (
-    <Link to="/" className="logo" aria-label="Syncorp Technologies home" onClick={onClick}>
+    <Link to="/" className="logo" aria-label="Syncorb Technologies home" onClick={onClick}>
       <svg width="40" height="40" viewBox="0 0 64 64" aria-hidden="true">
         <defs>
           <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
@@ -37,7 +37,7 @@ export default function Logo({ onClick }) {
         />
       </svg>
       <span className="logo-text">
-        <b style={{ color: textMain }}>SYNCORP</b>
+        <b style={{ color: textMain }}>Syncorb</b>
         <small style={{ color: textSub }}>TECHNOLOGIES</small>
       </span>
     </Link>

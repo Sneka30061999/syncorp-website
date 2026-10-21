@@ -1,160 +1,164 @@
 // Single source of truth for the Products section and the product detail pages.
-// To add / change a product, edit this array only. Cards, detail pages and the contact form update automatically.
-// Replace the sample products with the real ones provided by the trainer.
-//   icon  = image on the home-page card      image = screenshot on the detail page
-//   features / highlights use icon names from src/components/Icons.jsx
-
-const commonWhy = [
-  "Intuitive and easy-to-use interface",
-  "Flexible for teams of all sizes",
-  "Regular updates and new features",
-  "Dedicated support",
-];
+// Add a product here — cards, detail pages and contact form all update automatically.
+//
+//  icon         = card thumbnail
+//  image        = hero screenshot on detail page
+//  featureGroups = numbered sections on detail page (title + array of { label, text })
+//  whoFor       = "Who It's For" checklist items
+//  ctaText      = Get Started paragraph
 
 export const products = [
-  {
-    id: "taskflow",
-    name: "TaskFlow",
-    category: "Productivity",
-    subtitle: "Project & Task Management SaaS",
-    tagline: "Plan. Track. Achieve.",
-    intro:
-      "TaskFlow helps teams stay organized, collaborate efficiently and get more done. Manage your projects, assign tasks and track progress, all in one place.",
-    short: "A powerful solution to streamline your business operations and improve team collaboration.",
-    icon: "/syncorp-website/images/icon-taskflow.svg",
-    image: "/syncorp-website/images/taskflow-screen.svg",
-    overviewTitle: "Simplify Project Management with TaskFlow",
-    purpose:
-      "TaskFlow is a modern project management tool designed to help teams plan, track and complete tasks with ease. Whether you are a small team or a growing business, TaskFlow gives you the clarity and control you need to stay on top.",
-    highlights: [
-      { icon: "bolt", title: "Boost Productivity", text: "Keep your team focused and aligned." },
-      { icon: "users", title: "Better Collaboration", text: "Work together, share updates, get things done." },
-      { icon: "shield", title: "Secure & Reliable", text: "Your data is always safe with us." },
-    ],
-    featuresTitle: "Everything You Need to Manage Your Projects",
-    featuresIntro:
-      "TaskFlow comes with powerful features to help you plan, organize and track your work, without the complexity.",
-    features: [
-      { icon: "task", title: "Task Management", text: "Create, assign and track tasks with ease." },
-      { icon: "folder", title: "Project Organization", text: "Keep your projects structured and on schedule." },
-      { icon: "progress", title: "Progress Tracking", text: "Monitor progress with visual reports." },
-      { icon: "bell", title: "Real-time Updates", text: "Stay informed with instant notifications." },
-      { icon: "cloud", title: "File Sharing", text: "Share files and resources seamlessly." },
-      { icon: "mobile", title: "Mobile Friendly", text: "Access your work from any device." },
-    ],
-    whyTitle: "Built for Teams. Designed for Results.",
-    whyText:
-      "TaskFlow combines simplicity with powerful features to help your team work smarter, faster and more efficiently.",
-    whyPoints: commonWhy,
-    ctaText: "Experience the power of TaskFlow and take your team's productivity to the next level.",
-  },
+  // ── 1. HMS ────────────────────────────────────────────────────────────────
   {
     id: "datalens",
-    name: "DataLens",
-    category: "Analytics",
-    subtitle: "Business Analytics SaaS",
-    tagline: "See. Understand. Decide.",
-    intro:
-      "DataLens turns your spreadsheets and app data into clear dashboards, so your team can make confident decisions without a data expert.",
-    short: "Gain valuable insights with real-time analytics and intelligent reporting.",
-    icon: "/syncorp-website/images/icon-datalens.svg",
-    image: "/syncorp-website/images/datalens-screen.svg",
-    overviewTitle: "Understand Your Business with DataLens",
+    name: "Hotel Management System (HMS) with AI & n8n Automation",
+    category: "Hospitality • Cloud SaaS",
+    tag: "Hospitality",
+    subtitle:
+      "An all-in-one Cloud Hotel Management System and PMS with built-in AI guest concierges, automated WhatsApp contactless check-ins, dynamic pricing, and real-time POS sync.",
+    short: "An all-in-one Cloud Hotel Management System and PMS with built-in AI guest concierges, automated WhatsApp contactless check-ins, dynamic pricing, and real-time...",
+    icon:  "/syncorp-website/images/image-02.avif",
+    image: "/syncorp-website/images/image-02.avif",
     purpose:
-      "DataLens is an easy-to-use analytics tool that brings your numbers together in one place. Connect your data, pick a chart and share a live dashboard with your team in minutes.",
-    highlights: [
-      { icon: "chart", title: "Clear Insights", text: "Turn raw numbers into simple charts." },
-      { icon: "users", title: "Shared Dashboards", text: "Everyone sees the same live numbers." },
-      { icon: "shield", title: "Secure & Reliable", text: "Your data is always safe with us." },
+      "Our Hotel Management System (HMS) is a modern cloud Property Management System (PMS) engineered to eliminate high OTA commissions (15–25%) and automate front desk operations. Built with a native AI & n8n Automation Engine, it turns complex daily hotel tasks into frictionless, self-running workflows.",
+
+    featureSectionTitle: "Built-in Automation Use Cases",
+    featureGroups: [
+      {
+        title: "Contactless WhatsApp Check-In & Check-Out Engine",
+        points: [
+          { label: "The Workflow:",  text: "24 hours prior to arrival, an automated n8n webhook triggers a personalised WhatsApp message to the guest." },
+          { label: "AI Document Verification:", text: "The guest uploads their government ID photo; vision AI extracts details and pre-fills the registration card." },
+          { label: "Express Keycard / QR Pass:", text: "Guests skip 20-minute reception queues upon arrival and settle their unified bill via a 1-click WhatsApp payment link at checkout." },
+        ],
+      },
+      {
+        title: "Real-Time Multi-Channel OTA Sync (Zero Overbooking)",
+        points: [
+          { label: "The Workflow:", text: "When a room is booked on your direct website, our webhook router broadcasts the updated inventory across Booking.com, Airbnb, and Agoda in under 500 milliseconds." },
+          { label: "Dynamic Pricing Automation:", text: "Automatically adjusts room rates based on local city events, seasonal occupancy rates, and competitor pricing trends." },
+        ],
+      },
+      {
+        title: "Unified Restaurant, Bar & Spa POS Automation",
+        points: [
+          { label: "", text: "Food & beverage tabs, spa treatments, and minibar expenses post directly to the guest's central room folio in real time, eliminating billing discrepancies at checkout." },
+        ],
+      },
+      {
+        title: "Housekeeping Task Routing & AI Room Inspection",
+        points: [
+          { label: "", text: "When a guest checks out, the room is automatically flagged as \"Dirty\" in the housekeeping mobile app. Once cleaned, the supervisor approves it, and front desk reservation calendars reflect \"Ready for Check-In\" instantly." },
+        ],
+      },
     ],
-    featuresTitle: "Everything You Need to Understand Your Data",
-    featuresIntro:
-      "DataLens comes with powerful features to help you collect, explore and share your data, without the complexity.",
-    features: [
-      { icon: "workflow", title: "Data Connections", text: "Connect spreadsheets and databases." },
-      { icon: "chart", title: "Ready-made Dashboards", text: "Start fast with charts that are ready to use." },
-      { icon: "bell", title: "Smart Alerts", text: "Get notified when key numbers change." },
-      { icon: "mail", title: "Scheduled Reports", text: "Send reports to your inbox automatically." },
-      { icon: "cloud", title: "Live Sharing", text: "Share a live link with anyone on your team." },
-      { icon: "mobile", title: "Mobile Friendly", text: "View your dashboards on any device." },
+
+    whoFor: [
+      "Boutique hotels, independent resorts, and vacation rental chains looking to eliminate OTA commissions.",
+      "Business hotels needing fast contactless guest turnover and automated corporate billing.",
+      "Serviced apartments requiring automated long-stay invoicing and utility tracking.",
     ],
-    whyTitle: "Built for Teams. Designed for Results.",
-    whyText:
-      "DataLens combines simplicity with powerful features to help your team understand its numbers faster and act on them with confidence.",
-    whyPoints: commonWhy,
-    ctaText: "Experience the power of DataLens and start making decisions backed by clear data.",
+    ctaText:
+      "Experience the power of automated hospitality operations. Contact our Engineering Team to book a live demo or request early access.",
   },
+
+  // ── 2. HRMS ───────────────────────────────────────────────────────────────
   {
     id: "securevault",
-    name: "SecureVault",
-    category: "Security",
-    subtitle: "File Security & Compliance SaaS",
-    tagline: "Store. Protect. Control.",
-    intro:
-      "SecureVault keeps your company files and records safe, and shows you who accessed what and when.",
-    short: "Secure your data and business with advanced security and compliance features.",
-    icon: "/syncorp-website/images/icon-securevault.svg",
-    image: "/syncorp-website/images/securevault-screen.svg",
-    overviewTitle: "Protect Your Business with SecureVault",
+    name: "Multi-Tenant HRMS Platform",
+    category: "Human Resources • Cloud SaaS",
+    tag: "Enterprise & SaaS",
+    subtitle:
+      "A scalable Human Resource Management System (HRMS) designed for modern workforce management.",
+    short: "A scalable Human Resource Management System (HRMS) designed for modern workforce management.",
+    icon:  "/syncorp-website/images/image-3.avif",
+    image: "/syncorp-website/images/image-3.avif",
     purpose:
-      "SecureVault is a secure place for important business files. You decide who can see and change each file, and every action is recorded so you stay in control and ready for audits.",
-    highlights: [
-      { icon: "lock", title: "Strong Protection", text: "Files are encrypted at all times." },
-      { icon: "users", title: "Controlled Access", text: "Give each person only what they need." },
-      { icon: "shield", title: "Secure & Reliable", text: "Your data is always safe with us." },
+      "Our Multi-Tenant HRMS Platform streamlines the entire employee lifecycle. From recruitment and onboarding to performance reviews and payroll, this SaaS platform empowers HR teams to focus on people rather than paperwork.",
+
+    featureSectionTitle: "Key Features",
+    featureGroups: [
+      {
+        title: "Core HR & Employee Self-Service",
+        points: [
+          { label: "", text: "Maintain a centralised directory of employee records. Give staff the ability to request time off, view pay slips, and update personal information through an intuitive self-service portal." },
+        ],
+      },
+      {
+        title: "Recruitment & Onboarding",
+        points: [
+          { label: "", text: "Automate job postings, applicant tracking, and digital document signing. Ensure new hires have a smooth, professional onboarding experience from day one." },
+        ],
+      },
+      {
+        title: "Performance & Attendance Tracking",
+        points: [
+          { label: "", text: "Set organisational goals, conduct 360-degree performance reviews, and integrate with biometric or IP-based attendance systems for accurate time tracking." },
+        ],
+      },
     ],
-    featuresTitle: "Everything You Need to Keep Your Data Safe",
-    featuresIntro:
-      "SecureVault comes with powerful features to help you protect, manage and audit your files, without the complexity.",
-    features: [
-      { icon: "lock", title: "Encrypted Storage", text: "Keep every file protected." },
-      { icon: "users", title: "Role-based Access", text: "Control who can view and edit." },
-      { icon: "progress", title: "Activity Log", text: "See every change in one place." },
-      { icon: "cloud", title: "Automatic Backups", text: "Never lose an important file." },
-      { icon: "bell", title: "Security Alerts", text: "Get told about unusual activity." },
-      { icon: "mobile", title: "Mobile Friendly", text: "Access your files from any device." },
+
+    whoFor: [
+      "Growing startups and mid-market enterprises.",
+      "HR agencies managing multiple client companies.",
+      "Distributed teams requiring cloud-based HR operations.",
     ],
-    whyTitle: "Built for Teams. Designed for Results.",
-    whyText:
-      "SecureVault combines simplicity with strong security so your team can share files safely and stay compliant without extra effort.",
-    whyPoints: commonWhy,
-    ctaText: "Experience the peace of mind of SecureVault and keep your business data safe.",
+    ctaText:
+      "Transform your HR department into a strategic asset. Schedule a demo of our HRMS platform today.",
   },
+
+  // ── 3. ERP ────────────────────────────────────────────────────────────────
   {
-    id: "autosync",
-    name: "AutoSync",
-    category: "Automation",
-    subtitle: "Workflow Automation SaaS",
-    tagline: "Connect. Automate. Save Time.",
-    intro:
-      "AutoSync connects the tools you already use and handles repeat tasks for you, so your team can focus on real work.",
-    short: "Automate your workflows and save time with smart automation tools.",
-    icon: "/syncorp-website/images/icon-autosync.svg",
-    image: "/syncorp-website/images/autosync-screen.svg",
-    overviewTitle: "Automate Your Daily Work with AutoSync",
+    id: "enterprise",
+    name: "Institutional ERP with Campus Automation Engine",
+    category: "Enterprise • Cloud SaaS",
+    tag: "Enterprise & SaaS",
+    subtitle:
+      "A cloud-native multi-tenant Institutional ERP system for universities, colleges, and school networks featuring automated fee collection, admissions CRM, Outcome-Based Education (OBE), and accreditation audit exports.",
+    short: "A cloud-native multi-tenant Institutional ERP system for universities, colleges, and school networks featuring automated fee collection, admissions CRM, Outcome-...",
+    icon:  "/syncorp-website/images/image-5.avif",
+    image: "/syncorp-website/images/image-5.avif",
     purpose:
-      "AutoSync is a no-code automation tool. Set simple rules, connect your apps and let routine work run on its own, with a clear record of everything that ran.",
-    highlights: [
-      { icon: "clock", title: "Save Time", text: "Stop repeating the same manual steps." },
-      { icon: "workflow", title: "Connected Apps", text: "Make your tools work together." },
-      { icon: "shield", title: "Secure & Reliable", text: "Your data is always safe with us." },
+      "Our Institutional ERP System is a modular, multi-tenant cloud platform engineered to eliminate operational silos across educational institutions. Equipped with a native Campus Automation Engine, it streamlines admissions, fee reconciliation, academic grading, and statutory compliance on autopilot.",
+
+    featureSectionTitle: "Built-in Automation Use Cases",
+    featureGroups: [
+      {
+        title: "End-to-End Digital Admissions: CRM & Lead Routing",
+        points: [
+          { label: "The Workflow:", text: "Inquiries from college fairs, social media ads, and web portals land in our central admissions funnel." },
+          { label: "Automated Routing & Scheduling:", text: "Leads are scored and allocated to counselors in real time. Prospects automatically receive WhatsApp invitations to book campus tours and virtual interviews." },
+        ],
+      },
+      {
+        title: "Automated Fee Schedule Reconciliation & WhatsApp Reminders",
+        points: [
+          { label: "The Workflow:", text: "The system calculates term fees, scholarship concessions, and transport charges automatically." },
+          { label: "Instant Payment Links:", text: "Automated WhatsApp payment notices with integrated UPI and Net Banking links are sent to parents, reducing administrative fee collection backlogs by over 90%." },
+        ],
+      },
+      {
+        title: "Outcome-Based Education (OBE) & Accreditation Exports",
+        points: [
+          { label: "1-Click Audit Preparation:", text: "Course Outcomes (COs) and Program Outcomes (POs) are continuously tracked across exams and internal assignments. When NAAC, NIRF, or NBA audit inspections arrive, comprehensive compliance dossiers are generated in seconds without manual spreadsheet collection." },
+        ],
+      },
+      {
+        title: "Smart Transport Tracking & Hostel Gate-Pass Automation",
+        points: [
+          { label: "Transport Automation:", text: "Live GPS vehicle streams with automated geo-fenced WhatsApp arrival notifications sent to parents." },
+          { label: "Hostel Security:", text: "Digital out-pass workflows with automated SMS/WhatsApp authorisation requests sent to parents' smartphones." },
+        ],
+      },
     ],
-    featuresTitle: "Everything You Need to Automate Your Work",
-    featuresIntro:
-      "AutoSync comes with powerful features to help you build, run and monitor automations, without the complexity.",
-    features: [
-      { icon: "task", title: "Simple Rules", text: "Build automations with plain rules." },
-      { icon: "workflow", title: "App Connections", text: "Connect your favourite business apps." },
-      { icon: "clock", title: "Scheduled Runs", text: "Run tasks at the times you choose." },
-      { icon: "bell", title: "Failure Alerts", text: "Know right away if something fails." },
-      { icon: "progress", title: "Run History", text: "See what ran and when." },
-      { icon: "mobile", title: "Mobile Friendly", text: "Manage automations from any device." },
+
+    whoFor: [
+      "Premier engineering colleges, universities, and multi-campus school networks.",
+      "Large autonomous educational trusts requiring multi-tenant branch oversight.",
+      "Vocational institutes and polytechnics seeking complete academic digitisation.",
     ],
-    whyTitle: "Built for Teams. Designed for Results.",
-    whyText:
-      "AutoSync combines simplicity with powerful automation to help your team work smarter and spend time on what matters.",
-    whyPoints: commonWhy,
-    ctaText: "Experience the power of AutoSync and give your team hours back every week.",
+    ctaText:
+      "Transform your campus operations with unified automation. Contact our Education Technology Team or explore our Fixed Milestone Development Pricing to modernise your institution.",
   },
 ];
 

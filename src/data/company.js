@@ -1,14 +1,14 @@
 // Replace with the approved company details from the trainer.
 export const company = {
-  name: "Syncorp Technologies",
+  name: "Syncorb Technologies",
   eyebrow: "Innovate · Build · Grow",
   tagline: "Smart SaaS Solutions for Growing Businesses",
   intro:
-    "Syncorp Technologies builds innovative software solutions that help businesses streamline operations, improve productivity and grow with confidence.",
+    "Syncorb Technologies builds innovative software solutions that help businesses streamline operations, improve productivity and grow with confidence.",
   productsIntro:
     "Explore our suite of SaaS products designed to simplify your work, boost productivity and help you achieve more.",
   about:
-    "Syncorp Technologies designs and runs cloud-based SaaS products for growing businesses. We focus on building business-centric software that is reliable, user-friendly and future-ready, so your team spends its time on the business instead of the tools.",
+    "Syncorb Technologies designs and runs cloud-based SaaS products for growing businesses. We focus on building business-centric software that is reliable, user-friendly and future-ready, so your team spends its time on the business instead of the tools.",
   solutionsText:
     "Our SaaS solutions are designed to help you work smarter, not harder. We focus on delivering practical, scalable and easy-to-use technology for real business needs.",
   solutions: [
@@ -23,8 +23,10 @@ export const company = {
     { icon: "code", title: "Modern Technology", text: "Built with the latest technologies." },
     { icon: "refresh", title: "Continuous Improvement", text: "We keep improving for your success." },
   ],
-  email: "info@syncorp.example",
+  email: "info@Syncorb.example",
   phone: "+91 00000 00000",
-  address: "Syncorp Technologies, Your City, India",
+  address: "Syncorb Technologies, Your City, India",
   hours: "Mon – Fri, 9:00 AM – 6:00 PM IST",
+  // Replace with your real address — this drives the embedded map on the contact page
+  mapQuery: "Syncorb+Technologies,India",
 };

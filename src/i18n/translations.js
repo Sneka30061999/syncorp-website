@@ -22,15 +22,15 @@ export const translations = {
     hero_eyebrow: "Innovate · Build · Grow",
     hero_tagline: "Smart SaaS Solutions for Growing Businesses",
     hero_intro:
-      "Syncorp Technologies builds innovative software solutions that help businesses streamline operations, improve productivity and grow with confidence.",
+      "Syncorb Technologies builds innovative software solutions that help businesses streamline operations, improve productivity and grow with confidence.",
     hero_explore:  "Explore Products",
     hero_contactUs: "Contact Us",
 
     // Products section
     products_eyebrow:  "Our Products",
-    products_heading:  "Powerful SaaS Products for Modern Businesses",
+    products_heading:  "Technology We've Built to Solve Real Problems.",
     products_intro:
-      "Explore our suite of SaaS products designed to simplify your work, boost productivity and help you achieve more.",
+      "From AI/ML and FinTech to logistics, education, enterprise SaaS, and commerce — Syncorb builds digital products and platforms around the way businesses actually work.",
     products_learnMore: "Learn More",
 
     // Solutions section
@@ -48,10 +48,10 @@ export const translations = {
     solutions_scale_t: "Grow your business without limits.",
 
     // About section
-    about_eyebrow:  "Why Choose Syncorp",
+    about_eyebrow:  "Why Choose Syncorb",
     about_heading:  "Your Trusted Technology Partner",
     about_body:
-      "Syncorp Technologies designs and runs cloud-based SaaS products for growing businesses. We focus on building business-centric software that is reliable, user-friendly and future-ready, so your team spends its time on the business instead of the tools.",
+      "Syncorb Technologies designs and runs cloud-based SaaS products for growing businesses. We focus on building business-centric software that is reliable, user-friendly and future-ready, so your team spends its time on the business instead of the tools.",
     about_why1_title: "Business Focused",
     about_why1_text:  "Solutions that solve real problems.",
     about_why2_title: "User Friendly",
@@ -64,7 +64,7 @@ export const translations = {
     // CTA Banner
     cta_heading: "Ready to Transform the Way You Work?",
     cta_body:
-      "Discover how Syncorp Technologies can help your business work smarter with modern software solutions.",
+      "Discover how Syncorb Technologies can help your business work smarter with modern software solutions.",
     cta_btn: "Contact Our Team",
 
     // Footer
@@ -117,6 +117,10 @@ export const translations = {
     pd_overview:  "Overview",
     pd_features:  "Key Features",
     pd_why:       "Why Choose",
+    pd_who_for:   "Who It's For",
+    pd_get_started: "Get Started",
+    pd_request_demo: "Request a Demo",
+    pd_all_platforms: "All Platforms",
     pd_whycheck1: "Intuitive and easy-to-use interface",
     pd_whycheck2: "Flexible for teams of all sizes",
     pd_whycheck3: "Regular updates and new features",
@@ -153,9 +157,9 @@ export const translations = {
     hero_contactUs:"எங்களை தொடர்பு கொள்ளுங்கள்",
 
     products_eyebrow: "எங்கள் தயாரிப்புகள்",
-    products_heading: "நவீன வணிகங்களுக்கான சக்திவாய்ந்த SaaS தயாரிப்புகள்",
+    products_heading: "நாங்கள் உண்மையான பிரச்சினைகளை தீர்க்க கட்டிய தொழில்நுட்பம்.",
     products_intro:
-      "உங்கள் வேலையை எளிதாக்கவும், உற்பத்தித்திறனை அதிகரிக்கவும் மற்றும் அதிகம் அடையவும் வடிவமைக்கப்பட்ட எங்கள் SaaS தயாரிப்புகளை ஆராயுங்கள்.",
+      "AI/ML மற்றும் FinTech முதல் தளவாடம், கல்வி, நிறுவன SaaS மற்றும் வணிகம் வரை — Syncorp வணிகங்கள் உண்மையில் செயல்படும் விதத்தில் டிஜிட்டல் தயாரிப்புகளையும் தளங்களையும் உருவாக்குகிறது.",
     products_learnMore: "மேலும் அறிக",
 
     solutions_eyebrow: "எங்கள் தீர்வுகள்",
@@ -234,6 +238,10 @@ export const translations = {
     pd_overview:  "கண்ணோட்டம்",
     pd_features:  "முக்கிய அம்சங்கள்",
     pd_why:       "ஏன் தேர்வு செய்ய வேண்டும்",
+    pd_who_for:   "யாருக்காக",
+    pd_get_started: "தொடங்குங்கள்",
+    pd_request_demo: "டெமோ கோரவும்",
+    pd_all_platforms: "அனைத்து தளங்களும்",
     pd_whycheck1: "உள்ளுணர்வு மற்றும் பயன்படுத்த எளிதான இடைமுகம்",
     pd_whycheck2: "எல்லா அளவிலான குழுக்களுக்கும் நெகிழ்வானது",
     pd_whycheck3: "தொடர்ந்து புதுப்பிப்புகள் மற்றும் புதிய அம்சங்கள்",
@@ -267,9 +275,9 @@ export const translations = {
     hero_contactUs: "हमसे संपर्क करें",
 
     products_eyebrow: "हमारे उत्पाद",
-    products_heading: "आधुनिक व्यवसायों के लिए शक्तिशाली SaaS उत्पाद",
+    products_heading: "हमने जो तकनीक असली समस्याओं को हल करने के लिए बनाई है।",
     products_intro:
-      "हमारे SaaS उत्पादों की श्रृंखला देखें जो आपके काम को सरल बनाने, उत्पादकता बढ़ाने और अधिक प्राप्त करने के लिए डिज़ाइन की गई है।",
+      "AI/ML और FinTech से लेकर लॉजिस्टिक्स, शिक्षा, एंटरप्राइज़ SaaS और कॉमर्स तक — Syncorp डिजिटल उत्पाद और प्लेटफ़ॉर्म उस तरीके से बनाता है जिस तरह से व्यवसाय वास्तव में काम करते हैं।",
     products_learnMore: "और जानें",
 
     solutions_eyebrow: "हमारे समाधान",
@@ -348,6 +356,10 @@ export const translations = {
     pd_overview:  "अवलोकन",
     pd_features:  "मुख्य विशेषताएं",
     pd_why:       "क्यों चुनें",
+    pd_who_for:   "किसके लिए है",
+    pd_get_started: "शुरू करें",
+    pd_request_demo: "डेमो अनुरोध करें",
+    pd_all_platforms: "सभी प्लेटफ़ॉर्म",
     pd_whycheck1: "सहज और उपयोग में आसान इंटरफ़ेस",
     pd_whycheck2: "सभी आकार की टीमों के लिए लचीला",
     pd_whycheck3: "नियमित अपडेट और नई सुविधाएं",
@@ -381,9 +393,9 @@ export const translations = {
     hero_contactUs: "تواصل معنا",
 
     products_eyebrow: "منتجاتنا",
-    products_heading: "منتجات SaaS قوية للشركات الحديثة",
+    products_heading: "التكنولوجيا التي بنيناها لحل مشاكل حقيقية.",
     products_intro:
-      "استكشف مجموعتنا من منتجات SaaS المصممة لتبسيط عملك وتعزيز الإنتاجية ومساعدتك على تحقيق المزيد.",
+      "من الذكاء الاصطناعي والتقنية المالية إلى اللوجستيات والتعليم وتطبيقات SaaS للمؤسسات والتجارة — تبني Syncorp منتجات وأنظمة رقمية بالطريقة التي تعمل بها الشركات فعلاً.",
     products_learnMore: "اعرف أكثر",
 
     solutions_eyebrow: "حلولنا",
@@ -462,6 +474,10 @@ export const translations = {
     pd_overview:  "نظرة عامة",
     pd_features:  "الميزات الرئيسية",
     pd_why:       "لماذا تختار",
+    pd_who_for:   "لمن هو",
+    pd_get_started: "ابدأ الآن",
+    pd_request_demo: "طلب عرض توضيحي",
+    pd_all_platforms: "جميع المنصات",
     pd_whycheck1: "واجهة سهلة الاستخدام",
     pd_whycheck2: "مرن لجميع أحجام الفرق",
     pd_whycheck3: "تحديثات منتظمة وميزات جديدة",

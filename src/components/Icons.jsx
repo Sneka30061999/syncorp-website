@@ -26,6 +26,7 @@ const paths = {
   clock: (<><circle cx="20" cy="20" r="14" /><path d="M20 11v9l6 4" /></>),
   mail: (<><rect x="5" y="9" width="30" height="22" rx="3" /><path d="M6 12l14 11 14-11" /></>),
   phone: (<path d="M12 6h5l3 8-4 3a16 16 0 0 0 7 7l3-4 8 3v5a3 3 0 0 1-3 3A26 26 0 0 1 8 9a3 3 0 0 1 3-3z" />),
+  map: (<><path d="M20 4a9 9 0 0 0-9 9c0 7 9 17 9 17s9-10 9-17a9 9 0 0 0-9-9z" /><circle cx="20" cy="13" r="3" /></>),
 };
 
 export function Icon({ name, size = 40 }) {

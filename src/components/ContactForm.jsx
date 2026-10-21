@@ -17,7 +17,7 @@ async function sendEnquiry(payload) {
     return;
   }
   await new Promise((r) => setTimeout(r, 700)); // simulate network
-  const key = "syncorp_enquiries";
+  const key = "syncorb_enquiries";
   const saved = JSON.parse(localStorage.getItem(key) || "[]");
   localStorage.setItem(key, JSON.stringify([...saved, payload]));
 }
